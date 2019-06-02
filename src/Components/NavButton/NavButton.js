@@ -18,7 +18,7 @@ function NavButton() {
 
   return (
     <div>
-      <Fab color="primary" aria-label="Location" className={classes.fab}>
+      <Fab color="secondary" aria-label="Location" className={classes.fab}>
         <LocationOnIcon />
       </Fab>
     </div>
