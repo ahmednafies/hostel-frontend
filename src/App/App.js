@@ -8,11 +8,7 @@ function App() {
   return (
     <div className="App">
       <Nav />
-
       <header className="App-header">
-        <p className="App-link">
-          Harbour Hostel
-        </p>
         <img src={logo} className="App-logo" alt="logo" />
         <p className="App-link">
           Website Under Construction
