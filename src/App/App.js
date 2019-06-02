@@ -1,5 +1,5 @@
 import React from 'react';
-import logo from './logo.svg';
+import logo from '../logo.svg';
 import './App.css';
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <p className="App-link">
-          Port Hostel
+          Harbour Hostel
         </p>
         <img src={logo} className="App-logo" alt="logo" />
         <p>
