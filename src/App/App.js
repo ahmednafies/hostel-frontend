@@ -2,9 +2,10 @@ import React from 'react';
 import logo from '../logo.svg';
 import './App.css';
 import Nav from '../Components/Nav/Nav'
-
+import Album from '../Components/Album/Album';
 
 function App() {
+
   return (
     <div className="App">
       <Nav />
@@ -14,6 +15,7 @@ function App() {
           Website Under Construction
         </p>
       </header>
+      <Album />
     </div>
   );
 }
