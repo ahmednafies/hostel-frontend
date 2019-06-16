@@ -1,31 +1,71 @@
-import React, { useState } from "react";
+import React, { Component } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
-import Photos, { photos } from "./Photos";
+//import firebase from '../../firebase';
 
-function Album() {
-    const [currentImage, setCurrentImage] = useState(0);
-    const [viewerIsOpen, setViewerIsOpen] = useState(false);
+class Albums extends Component{
+    constructor(props) {
+        super(props);
+        this.state = {
+          url: [],
+          currentImage:0,
+          viewerIsOpen: false,
+        };
+  
+      }
+    // componentDidMount() {
+    //       var db = firebase.firestore();
+    //       var docRef = db.collection("images").doc("bathrooms");
+    //       docRef.get().then((doc) => {
+    //           this.formatPhotos(doc.data())
+    //           console.log(this.state.url)
+    //       })
+    //   }
 
-    const openLightbox = (event, obj) => {
-        setCurrentImage(obj.index);
-        setViewerIsOpen(true);
-    };
-    const closeLightbox = () => {
-        setCurrentImage(0);
-        setViewerIsOpen(false);
-    };
+    // formatPhotos(photos){
+    //     var photosList = Object.values(photos)
+    //     console.log(photosList)
+    //     var formattedPhotos = []
+    //     photosList.forEach(element => {
+    //         formattedPhotos.push({
+    //             src:element,
+    //             width:3,
+    //             height:4
+    //         })
+    //     });
+    //     console.log(formattedPhotos)
+    //     this.setState({url:formattedPhotos})
+    // }
+    
+    render(){
+        const openLightbox = (event, obj) => {
+            this.setState(
+                {
+                    currentImage:obj.index,
+                    viewerIsOpen:true
+                }
+            );
+        }
+    
+        const closeLightbox = () => {
+            this.setState(
+                {
+                    currentImage:0,
+                    viewerIsOpen:false
+                }
+            );
+        }
+
 
     return (
         <div>
-            <Photos/>
-            <Gallery photos={photos} onClick={openLightbox} />
+            <Gallery photos={this.props.photos} onClick={openLightbox} />
             <ModalGateway>
-                {viewerIsOpen ? (
+                {this.state.viewerIsOpen ? (
                     <Modal onClose={closeLightbox}>
                         <Carousel
-                            currentIndex={currentImage}
-                            views={photos.map(x => ({
+                            currentIndex={this.state.currentImage}
+                            views={this.props.photos.map(x => ({
                                 ...x,
                                 srcset: x.srcSet,
                                 caption: x.title
@@ -37,5 +77,7 @@ function Album() {
         </div>
     );
 }
+}
 
-export default Album;
+
+export default Albums;
