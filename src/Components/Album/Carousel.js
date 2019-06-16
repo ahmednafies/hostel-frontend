@@ -8,7 +8,7 @@ class Carousel extends Component {
 
     return (
       <div>
-        <BackgroundSlider images={common.map(photo => photo.src)} duration={5} transition={2} />
+        <BackgroundSlider images={common.map(photo => photo.src)} duration={3} transition={2} />
       </div>
     )
   }
