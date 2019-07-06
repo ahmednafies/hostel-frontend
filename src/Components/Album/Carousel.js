@@ -1,17 +1,19 @@
-import React, { Component } from 'react'
-import BackgroundSlider from 'react-background-slider'
-import { common } from './Photos/Common';
- 
+import React, { Component } from "react";
+import BackgroundSlider from "react-background-slider";
+import { carousel } from "./Photos/Carousel";
+
 class Carousel extends Component {
-
-  render () {
-
+  render() {
     return (
       <div>
-        <BackgroundSlider images={common.map(photo => photo.src)} duration={3} transition={2} />
+        <BackgroundSlider
+          images={carousel.map(photo => photo.src)}
+          duration={10}
+          transition={4}
+        />
       </div>
-    )
+    );
   }
 }
 
-export default Carousel
+export default Carousel;
