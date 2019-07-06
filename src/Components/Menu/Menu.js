@@ -95,6 +95,11 @@ const menuItems = [
     Icon: <AccountIcon />
   },
   {
+    name: "Rooms",
+    path: "rooms",
+    Icon: <AccountIcon />
+  },
+  {
     name: "Gallery",
     path: "gallery",
     Icon: <AccountIcon />
@@ -112,7 +117,10 @@ const menuItems = [
 ];
 
 const menuItemsList = menuItems.map(item => (
-  <Link to={"/" + item.path} style={{ textDecoration: "none" }}>
+  <Link
+    to={"/" + item.path}
+    style={{ textDecoration: "none", color: blue[900] }}
+  >
     <MenuItem>
       <ListItemIcon>{item.Icon}</ListItemIcon>
       {item.name}
@@ -125,7 +133,7 @@ const getMenuItems = () => {
 };
 
 function Menu(props) {
-  const [open, setOpen] = useState(true);
+  const [open, setOpen] = useState(false);
 
   const handleDrawerOpen = () => {
     setOpen(true);

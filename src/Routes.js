@@ -5,6 +5,7 @@ import { Contact } from "./Pages/Contact";
 import { Gallery } from "./Pages/Gallery";
 import { Location } from "./Pages/Location";
 import { About } from "./Pages/About";
+import { Rooms } from "./Pages/Rooms";
 
 class Routes extends Component {
   render() {
@@ -16,6 +17,7 @@ class Routes extends Component {
         <Route path="/gallery" component={Gallery} />
         <Route path="/contact" component={Contact} />
         <Route path="/location" component={Location} />
+        <Route path="/rooms" component={Rooms} />
       </span>
     );
   }
