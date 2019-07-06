@@ -1,8 +1,8 @@
 import React from "react";
-import { Carousel } from "../../Components/Album";
+import { SlideShow } from "../../Components/Album";
 
 function Home() {
-  return <Carousel />;
+  return <SlideShow />;
 }
 
 export default Home;

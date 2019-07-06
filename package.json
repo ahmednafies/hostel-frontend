@@ -16,8 +16,10 @@
     "react-dom": "^16.8.6",
     "react-images": "^1.0.0",
     "react-photo-gallery": "^7.0.2",
+    "react-responsive-carousel": "^3.1.49",
     "react-router-dom": "^5.0.1",
     "react-scripts": "3.0.1",
+    "react-sticky-footer": "0.1.0-rc3",
     "react-swipeable-views": "^0.13.3"
   },
   "scripts": {
