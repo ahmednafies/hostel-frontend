@@ -6,7 +6,7 @@ import { Carousel } from "react-responsive-carousel";
 const images = carousel.map(image => (
   <div>
     <img src={image.src} alt={image.src} />
-    <p className="legend">The best hostel in Tallinn</p>
+    <p className="legend">Welcome to Harbour Hostel Tallinn</p>
   </div>
 ));
 

@@ -83,47 +83,49 @@ const styles = theme => ({
   }
 });
 
-const menuItem = (name, icon, path) => {
-  return (
-    <Link to={"/" + path} style={{ textDecoration: "none" }}>
-      <MenuItem>
-        <ListItemIcon>{icon}</ListItemIcon>
-        {name}
-      </MenuItem>
-    </Link>
-  );
-};
+const menuItems = [
+  {
+    name: "Home",
+    path: "home",
+    Icon: <AccountIcon />
+  },
+  {
+    name: "About",
+    path: "about",
+    Icon: <AccountIcon />
+  },
+  {
+    name: "Gallery",
+    path: "gallery",
+    Icon: <AccountIcon />
+  },
+  {
+    name: "Location",
+    path: "location",
+    Icon: <AccountIcon />
+  },
+  {
+    name: "Contact",
+    path: "contact",
+    Icon: <ContactsIcon />
+  }
+];
 
-const getMenuItems = items => {
-  return (
-    <MenuList>
-      {menuItem("Home", <AccountIcon style={{ color: blue[800] }} />, "home")}
-      {menuItem(
-        "About",
-        <ContactsIcon style={{ color: blue[800] }} />,
-        "about"
-      )}
-      {menuItem(
-        "Gallery",
-        <AccountIcon style={{ color: blue[800] }} />,
-        "gallery"
-      )}
-      {menuItem(
-        "Location",
-        <AccountIcon style={{ color: blue[800] }} />,
-        "location"
-      )}
-      {menuItem(
-        "Contact",
-        <ContactsIcon style={{ color: blue[800] }} />,
-        "contact"
-      )}
-    </MenuList>
-  );
+const menuItemsList = menuItems.map(item => (
+  <Link to={"/" + item.path} style={{ textDecoration: "none" }}>
+    <MenuItem>
+      <ListItemIcon>{item.Icon}</ListItemIcon>
+      {item.name}
+    </MenuItem>
+  </Link>
+));
+
+const getMenuItems = () => {
+  return <MenuList>{menuItemsList}</MenuList>;
 };
 
 function Menu(props) {
-  const [open, setOpen] = useState(false);
+  const [open, setOpen] = useState(true);
 
   const handleDrawerOpen = () => {
     setOpen(true);
