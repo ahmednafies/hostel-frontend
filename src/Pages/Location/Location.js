@@ -1,7 +1,6 @@
 import React from "react";
 import { Typography } from "@material-ui/core";
 import Iframe from "react-iframe";
-import Paper from "@material-ui/core/Paper";
 import Grid from "@material-ui/core/Grid";
 
 function Location() {
