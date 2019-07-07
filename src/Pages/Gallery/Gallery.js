@@ -1,16 +1,17 @@
-import React, { Component } from "react";
+import React from "react";
 import { Album } from "../../Components/Album";
 import { common } from "../../Components/Album/Photos/Common";
+import Typography from "@material-ui/core/Typography";
 
-class Gallery extends Component {
-  render() {
-    return (
-      <div>
-        <h2>Gallery</h2>
-        <Album photos={common} />
-      </div>
-    );
-  }
+function Gallery() {
+  return (
+    <div>
+      <Typography>
+        <h1>Gallery</h1>
+      </Typography>
+      <Album photos={common} />
+    </div>
+  );
 }
 
 export default Gallery;

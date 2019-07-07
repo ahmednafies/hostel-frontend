@@ -18,7 +18,11 @@ import ChevronRightIcon from "@material-ui/icons/ChevronRight";
 import AccountIcon from "@material-ui/icons/AccountCircleTwoTone";
 import { Link } from "react-router-dom";
 import blue from "@material-ui/core/colors/blue";
-import ContactsIcon from "@material-ui/icons/ContactsTwoTone";
+import ContactsIcon from "@material-ui/icons/ContactsRounded";
+import PhotoIcon from "@material-ui/icons/PhotoRounded";
+import HomeIcon from "@material-ui/icons/HomeRounded";
+import LocationOnIcon from "@material-ui/icons/LocationOnRounded";
+import HotelIcon from "@material-ui/icons/HotelRounded";
 
 const drawerWidth = 240;
 
@@ -87,7 +91,7 @@ const menuItems = [
   {
     name: "Home",
     path: "home",
-    Icon: <AccountIcon />
+    Icon: <HomeIcon />
   },
   {
     name: "About",
@@ -97,17 +101,17 @@ const menuItems = [
   {
     name: "Rooms",
     path: "rooms",
-    Icon: <AccountIcon />
+    Icon: <HotelIcon />
   },
   {
     name: "Gallery",
     path: "gallery",
-    Icon: <AccountIcon />
+    Icon: <PhotoIcon />
   },
   {
     name: "Location",
     path: "location",
-    Icon: <AccountIcon />
+    Icon: <LocationOnIcon />
   },
   {
     name: "Contact",
@@ -123,7 +127,7 @@ const menuItemsList = menuItems.map(item => (
   >
     <MenuItem>
       <ListItemIcon>{item.Icon}</ListItemIcon>
-      {item.name}
+      <Typography>{item.name}</Typography>
     </MenuItem>
   </Link>
 ));

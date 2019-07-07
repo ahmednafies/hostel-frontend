@@ -13,7 +13,7 @@ import Avatar from "@material-ui/core/Avatar";
 
 const useStyles = makeStyles(theme => ({
   root: {
-    width: "80%",
+    width: "100%",
     marginTop: theme.spacing(3),
     overflowX: "auto"
   },
@@ -36,25 +36,27 @@ function Contact() {
   const classes = useStyles();
 
   return (
-    <Paper className={classes.root}>
+    <div>
       <Typography>
         <h1>Contact</h1>
       </Typography>
-      <Table className={classes.table}>
-        <TableBody>
-          {rows.map(row => (
-            <TableRow key={row.name}>
-              <TableCell component="th" scope="row">
-                <Avatar>{row.icon}</Avatar>
-              </TableCell>
-              <TableCell align="left">
-                <Typography>{row.value}</Typography>
-              </TableCell>
-            </TableRow>
-          ))}
-        </TableBody>
-      </Table>
-    </Paper>
+      <Paper className={classes.root}>
+        <Table className={classes.table}>
+          <TableBody>
+            {rows.map(row => (
+              <TableRow key={row.name}>
+                <TableCell component="th" scope="row">
+                  <Avatar>{row.icon}</Avatar>
+                </TableCell>
+                <TableCell align="right">
+                  <Typography>{row.value}</Typography>
+                </TableCell>
+              </TableRow>
+            ))}
+          </TableBody>
+        </Table>
+      </Paper>
+    </div>
   );
 }
 export default Contact;

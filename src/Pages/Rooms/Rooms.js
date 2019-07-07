@@ -8,6 +8,7 @@ import { doublerooms } from "../../Components/Album/Photos/DoubleRooms";
 import { twinbedrooms } from "../../Components/Album/Photos/TwinBedrooms";
 import { singlerooms } from "../../Components/Album/Photos/SingleRooms";
 import { triplerooms } from "../../Components/Album/Photos/TripleRooms";
+import Typography from "@material-ui/core/Typography";
 
 const rooms = [
   {
@@ -55,9 +56,9 @@ function Rooms(props) {
     <div className={classes.root}>
       <Grid container spacing={24}>
         <Grid item xs={12} className={classes.grid}>
-          <div>
+          <Typography>
             <h1>Our Rooms</h1>
-          </div>
+          </Typography>
         </Grid>
         {rooms.map((room, index) => {
           return (
