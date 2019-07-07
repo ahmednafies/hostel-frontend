@@ -1,23 +1,34 @@
 import React from "react";
+import Grid from "@material-ui/core/Grid";
 import { SlideShow } from "../../Components/Album";
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-
-const useStyles = makeStyles(theme => ({
-  root: {
-    width: "100%",
-    marginTop: theme.spacing(3),
-    overflowX: "auto"
-  }
-}));
+import { AwesomeButton } from "react-awesome-button";
+import "react-awesome-button/dist/styles.css";
+import "react-awesome-button/dist/themes/theme-eric.css";
+import { Typography } from "@material-ui/core";
 
 function Home() {
-  const classes = useStyles();
-
   return (
-    <Paper className={classes.root}>
+    <div>
       <SlideShow />
-    </Paper>
+      <Grid
+        container
+        spacing={3}
+        alignItems="center"
+        justify="center"
+        style={{ minHeight: "60vh" }}
+      >
+        <Grid item xs={4}>
+          <AwesomeButton
+            type="secondary"
+            size="large"
+            href="https://www.booking.com/hotel/ee/harbour-hostel-tallinn.en-gb.html"
+            target="_blank"
+          >
+            <Typography>Book Now</Typography>
+          </AwesomeButton>
+        </Grid>
+      </Grid>
+    </div>
   );
 }
 
