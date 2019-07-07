@@ -6,6 +6,7 @@ import { Gallery } from "./Pages/Gallery";
 import { Location } from "./Pages/Location";
 import { About } from "./Pages/About";
 import { Rooms } from "./Pages/Rooms";
+import RoomsView from "./Pages/Rooms/RoomView";
 
 class Routes extends Component {
   render() {
@@ -18,6 +19,7 @@ class Routes extends Component {
         <Route path="/contact" component={Contact} />
         <Route path="/location" component={Location} />
         <Route path="/rooms" component={Rooms} />
+        <Route path="/room/:path" component={RoomsView} />
       </span>
     );
   }

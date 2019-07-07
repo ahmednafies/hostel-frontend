@@ -7,7 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import blue from "@material-ui/core/colors/blue";
-
+import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   card: {
     maxWidth: 350,
@@ -33,25 +33,30 @@ function MediaCard(props) {
   const classes = useStyles();
 
   return (
-    <Card className={classes.card}>
-      <CardActionArea>
-        <CardMedia
-          className={classes.media}
-          image={props.image.src}
-          title="Contemplative Reptile"
-        />
-        <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
-            {props.image.name}
-          </Typography>
-        </CardContent>
-      </CardActionArea>
-    </Card>
+    <Link
+      to={"/room/" + props.room.path}
+      style={{ textDecoration: "none", color: blue[900] }}
+    >
+      <Card className={classes.card}>
+        <CardActionArea>
+          <CardMedia
+            className={classes.media}
+            image={props.room.src}
+            title="Contemplative Reptile"
+          />
+          <CardContent>
+            <Typography gutterBottom variant="h5" component="h2">
+              {props.room.name}
+            </Typography>
+          </CardContent>
+        </CardActionArea>
+      </Card>
+    </Link>
   );
 }
 
 MediaCard.propTypes = {
-  image: PropTypes.object.isRequired
+  room: PropTypes.object.isRequired
 };
 
 export default MediaCard;

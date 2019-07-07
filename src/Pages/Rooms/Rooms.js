@@ -3,35 +3,8 @@ import { withStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Slide from "@material-ui/core/Slide";
 import { MediaCard } from "../../Components/MediaCard";
-import { bathrooms } from "../../Components/Album/Photos/Bathrooms";
-import { doublerooms } from "../../Components/Album/Photos/DoubleRooms";
-import { twinbedrooms } from "../../Components/Album/Photos/TwinBedrooms";
-import { singlerooms } from "../../Components/Album/Photos/SingleRooms";
-import { triplerooms } from "../../Components/Album/Photos/TripleRooms";
 import Typography from "@material-ui/core/Typography";
-
-const rooms = [
-  {
-    src: singlerooms[0].src,
-    name: "Single Rooms"
-  },
-  {
-    src: doublerooms[0].src,
-    name: "Double Rooms"
-  },
-  {
-    src: twinbedrooms[0].src,
-    name: "Twin Bedrooms"
-  },
-  {
-    src: triplerooms[0].src,
-    name: "Triple Rooms"
-  },
-  {
-    src: bathrooms[0].src,
-    name: "Bathrooms"
-  }
-];
+import rooms from "./roomData";
 
 const styles = theme => ({
   root: {
@@ -71,7 +44,7 @@ function Rooms(props) {
               unmountOnExit
             >
               <Grid item xs={4}>
-                <MediaCard image={room} />
+                <MediaCard room={room} />
               </Grid>
             </Slide>
           );
