@@ -10,7 +10,8 @@ import ContactEmailIcon from "@material-ui/icons/ContactMailRounded";
 import PhoneIcon from "@material-ui/icons/PhoneRounded";
 import WebIcon from "@material-ui/icons/WebRounded";
 import Avatar from "@material-ui/core/Avatar";
-
+import LocationOnIcon from "@material-ui/icons/LocationOnRounded";
+import blue from "@material-ui/core/colors/blue";
 const useStyles = makeStyles(theme => ({
   root: {
     width: "100%",
@@ -29,7 +30,12 @@ function createData(name, value, icon) {
 const rows = [
   createData("Email", "info@harbourhostel.ee", <ContactEmailIcon />),
   createData("Website", "  https://harbourhostel.ee", <WebIcon />),
-  createData("Phone No", "666 0045", <PhoneIcon />)
+  createData("Phone no.", "666 0045", <PhoneIcon />),
+  createData(
+    "Address",
+    "14a Paadi, Tallinn City-Centre, 10151 Tallinn, Estonia",
+    <LocationOnIcon />
+  )
 ];
 
 function Contact() {
@@ -46,7 +52,7 @@ function Contact() {
             {rows.map(row => (
               <TableRow key={row.name}>
                 <TableCell component="th" scope="row">
-                  <Avatar>{row.icon}</Avatar>
+                  <Avatar style={{ color: blue[600] }}>{row.icon}</Avatar>
                 </TableCell>
                 <TableCell align="right">
                   <Typography>{row.value}</Typography>

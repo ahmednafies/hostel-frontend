@@ -1,13 +1,13 @@
-import React, { Component } from "react";
-
-class Location extends Component {
-  render() {
-    return (
-      <div>
-        <h2>Location</h2>
-      </div>
-    );
-  }
+import React from "react";
+import { Typography } from "@material-ui/core";
+function Location() {
+  return (
+    <div>
+      <Typography>
+        <h1>Location</h1>
+      </Typography>
+    </div>
+  );
 }
 
 export default Location;

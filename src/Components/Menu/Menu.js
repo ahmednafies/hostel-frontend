@@ -15,7 +15,7 @@ import IconButton from "@material-ui/core/IconButton";
 import MenuIcon from "@material-ui/icons/Menu";
 import ChevronLeftIcon from "@material-ui/icons/ChevronLeft";
 import ChevronRightIcon from "@material-ui/icons/ChevronRight";
-import AccountIcon from "@material-ui/icons/AccountCircleTwoTone";
+import AccountIcon from "@material-ui/icons/AccountCircleRounded";
 import { Link } from "react-router-dom";
 import blue from "@material-ui/core/colors/blue";
 import ContactsIcon from "@material-ui/icons/ContactsRounded";
@@ -126,8 +126,8 @@ const menuItemsList = menuItems.map(item => (
     style={{ textDecoration: "none", color: blue[900] }}
   >
     <MenuItem>
-      <ListItemIcon>{item.Icon}</ListItemIcon>
-      <Typography>{item.name}</Typography>
+      <ListItemIcon style={{ color: blue[700] }}>{item.Icon}</ListItemIcon>
+      <Typography style={{ color: blue[700] }}>{item.name}</Typography>
     </MenuItem>
   </Link>
 ));
