@@ -23,6 +23,7 @@ import PhotoIcon from "@material-ui/icons/PhotoRounded";
 import HomeIcon from "@material-ui/icons/HomeRounded";
 import LocationOnIcon from "@material-ui/icons/LocationOnRounded";
 import HotelIcon from "@material-ui/icons/HotelRounded";
+import { Avatar } from "@material-ui/core";
 
 const drawerWidth = 240;
 
@@ -33,6 +34,9 @@ const styles = theme => ({
   menuBackground: {
     color: "#fff",
     backgroundColor: blue[800]
+  },
+  avatar: {
+    margin: 10
   },
   appBar: {
     transition: theme.transitions.create(["margin", "width"], {
@@ -120,22 +124,6 @@ const menuItems = [
   }
 ];
 
-const menuItemsList = menuItems.map(item => (
-  <Link
-    to={"/" + item.path}
-    style={{ textDecoration: "none", color: blue[900] }}
-  >
-    <MenuItem>
-      <ListItemIcon style={{ color: blue[700] }}>{item.Icon}</ListItemIcon>
-      <Typography style={{ color: blue[700] }}>{item.name}</Typography>
-    </MenuItem>
-  </Link>
-));
-
-const getMenuItems = () => {
-  return <MenuList>{menuItemsList}</MenuList>;
-};
-
 function Menu(props) {
   const [open, setOpen] = useState(false);
 
@@ -145,6 +133,23 @@ function Menu(props) {
 
   const handleDrawerClose = () => {
     setOpen(false);
+  };
+
+  const menuItemsList = menuItems.map(item => (
+    <Link
+      to={"/" + item.path}
+      style={{ textDecoration: "none", color: blue[900] }}
+      onClick={handleDrawerClose}
+    >
+      <MenuItem>
+        <ListItemIcon style={{ color: blue[700] }}>{item.Icon}</ListItemIcon>
+        <Typography style={{ color: blue[700] }}>{item.name}</Typography>
+      </MenuItem>
+    </Link>
+  ));
+
+  const getMenuItems = () => {
+    return <MenuList>{menuItemsList}</MenuList>;
   };
 
   const { classes, theme, children } = props;
@@ -167,6 +172,8 @@ function Menu(props) {
           >
             <MenuIcon />
           </IconButton>
+          <Avatar alt="logo" src={props.logo} className={classes.avatar} />
+
           <Typography variant="h6" color="inherit" noWrap>
             {props.title}
           </Typography>

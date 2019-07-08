@@ -22,7 +22,7 @@ function Location() {
             width="800"
             height="600"
             frameborder="0"
-            style="border:0"
+            style={{ border: 0 }}
             allowfullscreen
           />
         </Grid>
