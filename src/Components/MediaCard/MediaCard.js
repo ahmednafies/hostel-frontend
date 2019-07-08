@@ -8,6 +8,7 @@ import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
 import blue from "@material-ui/core/colors/blue";
 import { Link } from "react-router-dom";
+
 const useStyles = makeStyles({
   card: {
     maxWidth: 350,

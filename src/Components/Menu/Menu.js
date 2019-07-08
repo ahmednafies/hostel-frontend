@@ -172,8 +172,9 @@ function Menu(props) {
           >
             <MenuIcon />
           </IconButton>
-          <Avatar alt="logo" src={props.logo} className={classes.avatar} />
-
+          <Link to="/home" style={{ textDecoration: "none" }}>
+            <Avatar alt="logo" src={props.logo} className={classes.avatar} />
+          </Link>
           <Typography variant="h6" color="inherit" noWrap>
             {props.title}
           </Typography>
