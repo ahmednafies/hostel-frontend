@@ -11,7 +11,7 @@ import { Link } from "react-router-dom";
 const useStyles = makeStyles({
   card: {
     maxWidth: 350,
-    marginTop: 30
+    margin: 30
   },
   media: {
     height: 0,

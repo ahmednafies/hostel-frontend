@@ -43,7 +43,7 @@ function Rooms(props) {
               mountOnEnter
               unmountOnExit
             >
-              <Grid item xs={4}>
+              <Grid item lg={4} md={6} sm={12} xs={12}>
                 <MediaCard room={room} />
               </Grid>
             </Slide>
