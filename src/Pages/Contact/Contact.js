@@ -29,8 +29,8 @@ function createData(name, value, icon) {
 
 const rows = [
   createData("Email", "info@harbourhostel.ee", <ContactEmailIcon />),
-  createData("Website", "  https://harbourhostel.ee", <WebIcon />),
-  createData("Phone no.", "666 0045", <PhoneIcon />),
+  createData("Website", "https://harbourhostel.ee", <WebIcon />),
+  createData("Phone no.", "+372 666 0045", <PhoneIcon />),
   createData(
     "Address",
     "14a Paadi, Tallinn City-Centre, 10151 Tallinn, Estonia",
