@@ -3,7 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
-
+import { about } from "../../Components/Album/Photos/About";
 const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
@@ -15,6 +15,9 @@ const useStyles = makeStyles(theme => ({
   },
   Typography: {
     fontSize: 300
+  },
+  Image: {
+    width: "100%"
   }
 }));
 
@@ -36,6 +39,9 @@ function About() {
           justify="center"
           alignItems="right"
         >
+          <Grid item xs={10} align="center">
+            <img className={classes.Image} src={about[0].src} alt="about" />
+          </Grid>
           <Grid item xs={10} align="left">
             <Typography paragraph>
               <Box fontWeight={fontWeight}>

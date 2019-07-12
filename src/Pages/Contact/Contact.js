@@ -12,14 +12,24 @@ import WebIcon from "@material-ui/icons/WebRounded";
 import Avatar from "@material-ui/core/Avatar";
 import LocationOnIcon from "@material-ui/icons/LocationOnRounded";
 import blue from "@material-ui/core/colors/blue";
+import Grid from "@material-ui/core/Grid";
+
+import { contact } from "../../Components/Album/Photos/Contact";
+
 const useStyles = makeStyles(theme => ({
   root: {
-    width: "100%",
-    marginTop: theme.spacing(3),
-    overflowX: "auto"
+    flexGrow: 1
   },
-  table: {
-    minWidth: 650
+  paper: {
+    padding: theme.spacing(2),
+    textAlign: "center",
+    color: theme.palette.text.primary
+  },
+  Typography: {
+    fontSize: 300
+  },
+  Image: {
+    width: "100%"
   }
 }));
 
@@ -46,22 +56,37 @@ function Contact() {
       <Typography>
         <h1>Contact</h1>
       </Typography>
-      <Paper className={classes.root}>
-        <Table className={classes.table}>
-          <TableBody>
-            {rows.map(row => (
-              <TableRow key={row.name}>
-                <TableCell component="th" scope="row">
-                  <Avatar style={{ color: blue[600] }}>{row.icon}</Avatar>
-                </TableCell>
-                <TableCell align="right">
-                  <Typography>{row.value}</Typography>
-                </TableCell>
-              </TableRow>
-            ))}
-          </TableBody>
-        </Table>
-      </Paper>
+      <div className={classes.root}>
+        <Grid
+          container
+          spacing={3}
+          direction="row"
+          justify="center"
+          alignItems="right"
+        >
+          <Grid item xs={10} align="center">
+            <img className={classes.Image} src={contact[0].src} alt="about" />
+          </Grid>
+          <Grid item xs={10} align="center">
+            <Paper className>
+              <Table className={classes.table}>
+                <TableBody>
+                  {rows.map(row => (
+                    <TableRow key={row.name}>
+                      <TableCell component="th" scope="row">
+                        <Avatar style={{ color: blue[600] }}>{row.icon}</Avatar>
+                      </TableCell>
+                      <TableCell align="right">
+                        <Typography>{row.value}</Typography>
+                      </TableCell>
+                    </TableRow>
+                  ))}
+                </TableBody>
+              </Table>
+            </Paper>
+          </Grid>
+        </Grid>
+      </div>
     </div>
   );
 }

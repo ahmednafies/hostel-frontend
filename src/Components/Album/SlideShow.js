@@ -1,6 +1,7 @@
 import React from "react";
 import BackgroundSlider from "react-background-slider";
 import { carousel } from "./Photos/Carousel";
+
 function SlideShow() {
   return (
     <div>

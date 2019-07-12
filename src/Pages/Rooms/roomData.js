@@ -3,7 +3,7 @@ import { doublerooms } from "../../Components/Album/Photos/DoubleRooms";
 import { twinbedrooms } from "../../Components/Album/Photos/TwinBedrooms";
 import { singlerooms } from "../../Components/Album/Photos/SingleRooms";
 import { triplerooms } from "../../Components/Album/Photos/TripleRooms";
-
+import { kitchen } from "../../Components/Album/Photos/Kitchen";
 const rooms = [
   {
     src: singlerooms[0].src,
@@ -34,6 +34,12 @@ const rooms = [
     name: "Bathrooms",
     path: "bathrooms",
     data: bathrooms
+  },
+  {
+    src: kitchen[0].src,
+    name: "Kitchen",
+    path: "kitchen",
+    data: kitchen
   }
 ];
 
