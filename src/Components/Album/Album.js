@@ -1,7 +1,6 @@
 import React, { Component } from "react";
 import Gallery from "react-photo-gallery";
 import Carousel, { Modal, ModalGateway } from "react-images";
-//import firebase from '../../firebase';
 
 class Albums extends Component {
   constructor(props) {
@@ -12,29 +11,6 @@ class Albums extends Component {
       viewerIsOpen: false
     };
   }
-  // componentDidMount() {
-  //       var db = firebase.firestore();
-  //       var docRef = db.collection("images").doc("bathrooms");
-  //       docRef.get().then((doc) => {
-  //           this.formatPhotos(doc.data())
-  //           console.log(this.state.url)
-  //       })
-  //   }
-
-  // formatPhotos(photos){
-  //     var photosList = Object.values(photos)
-  //     console.log(photosList)
-  //     var formattedPhotos = []
-  //     photosList.forEach(element => {
-  //         formattedPhotos.push({
-  //             src:element,
-  //             width:3,
-  //             height:4
-  //         })
-  //     });
-  //     console.log(formattedPhotos)
-  //     this.setState({url:formattedPhotos})
-  // }
 
   render() {
     const openLightbox = (event, obj) => {
