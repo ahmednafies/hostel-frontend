@@ -44,7 +44,7 @@ function Location() {
         justify="center"
         style={{ minHeight: "60vh" }}
       >
-        <Grid item xs={10} align="center">
+        <Grid item xs={12} sm={11} md={10} lg={10} align="center">
           <img className={classes.Image} src={location[0].src} alt="Location" />
         </Grid>
         <Grid item xs={10} align="left">
@@ -58,7 +58,7 @@ function Location() {
           </Typography>
         </Grid>
 
-        <Grid item xs={10} align="center">
+        <Grid item xs={12} sm={11} md={10} lg={10} align="center">
           <img className={classes.Image} src={location[1].src} alt="Location" />
         </Grid>
         <Grid item xs={10} align="left">
@@ -68,7 +68,7 @@ function Location() {
             </Box>
           </Typography>
         </Grid>
-        <Grid item xs={10} align="center">
+        <Grid item xs={12} sm={11} md={10} lg={10} align="center">
           <iframe
             title="map"
             className={classes.embed}

@@ -64,10 +64,10 @@ function Contact() {
           justify="center"
           alignItems="right"
         >
-          <Grid item xs={10} align="center">
+          <Grid item xs={12} sm={11} md={10} lg={10} align="center">
             <img className={classes.Image} src={contact[0].src} alt="about" />
           </Grid>
-          <Grid item xs={10} align="center">
+          <Grid item xs={12} sm={11} md={10} lg={10} align="center">
             <Paper className>
               <Table className={classes.table}>
                 <TableBody>
