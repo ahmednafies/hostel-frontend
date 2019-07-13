@@ -17,7 +17,8 @@ const useStyles = makeStyles(theme => ({
     fontSize: 300
   },
   Image: {
-    width: "100%"
+    width: "100%",
+    flex: 1
   }
 }));
 
