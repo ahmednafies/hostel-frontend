@@ -1,12 +1,12 @@
 import React from "react";
-import { withStyles } from "@material-ui/core/styles";
+import { makeStyles } from "@material-ui/core/styles";
 import Grid from "@material-ui/core/Grid";
 import Slide from "@material-ui/core/Slide";
 import { MediaCard } from "../../Components/MediaCard";
 import Typography from "@material-ui/core/Typography";
 import rooms from "./roomData";
 
-const styles = theme => ({
+const useStyles = makeStyles(theme => ({
   root: {
     flexGrow: 1
   },
@@ -20,10 +20,10 @@ const styles = theme => ({
     textAlign: "center",
     justify: "center"
   }
-});
+}));
 
-function Rooms(props) {
-  const { classes } = props;
+function Rooms() {
+  const classes = useStyles();
 
   return (
     <div className={classes.root}>
@@ -54,4 +54,4 @@ function Rooms(props) {
   );
 }
 
-export default withStyles(styles)(Rooms);
+export default Rooms;

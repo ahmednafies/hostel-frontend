@@ -47,7 +47,7 @@ function Location() {
         <Grid item xs={12} sm={11} md={10} lg={10} align="center">
           <img className={classes.Image} src={location[0].src} alt="Location" />
         </Grid>
-        <Grid item xs={10} align="left">
+        <Grid item xs={12} sm={11} md={10} lg={10} align="left">
           <Typography paragraph>
             <Box fontWeight={fontWeight}>
               Harbour hostel Tallinn is located at around{" "}
@@ -61,10 +61,10 @@ function Location() {
         <Grid item xs={12} sm={11} md={10} lg={10} align="center">
           <img className={classes.Image} src={location[1].src} alt="Location" />
         </Grid>
-        <Grid item xs={10} align="left">
+        <Grid item xs={12} sm={11} md={10} lg={10} align="left">
           <Typography paragraph>
             <Box fontWeight={fontWeight}>
-              And here is our location on google maps.
+              And here is our location on <b>google maps.</b>
             </Box>
           </Typography>
         </Grid>

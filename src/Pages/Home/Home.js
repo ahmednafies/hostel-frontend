@@ -17,7 +17,7 @@ function Home() {
         justify="center"
         style={{ minHeight: "60vh" }}
       >
-        <Grid item xs={4}>
+        <Grid item>
           <AwesomeButton
             type="secondary"
             size="large"
