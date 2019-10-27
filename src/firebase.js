@@ -1,7 +1,5 @@
 import firebase from "firebase";
 const settings = { timestampsInSnapshots: true };
-require('dotenv').config();
-console.log(process.env)
 const firebaseConfig = {
   apiKey: process.env.API_KEY,
   authDomain: process.env.AUTH_DOMAIN,
