@@ -1,13 +1,15 @@
 import firebase from "firebase";
 const settings = { timestampsInSnapshots: true };
+require('dotenv').config();
+console.log(process.env)
 const firebaseConfig = {
-  apiKey: "AIzaSyAjjuOzY37rmGkO-NxsxWDZEwfDtgrO7Mg",
-  authDomain: "port-hostel.firebaseapp.com",
-  databaseURL: "https://port-hostel.firebaseio.com",
-  projectId: "port-hostel",
-  storageBucket: "port-hostel.appspot.com",
-  messagingSenderId: "379551629738",
-  appId: "1:379551629738:web:6247847f77627dbf"
+  apiKey: process.env.API_KEY,
+  authDomain: process.env.AUTH_DOMAIN,
+  databaseURL: process.env.DATABASE_URL,
+  projectId: process.env.PROJECT_ID,
+  storageBucket: process.env.STORAGE_BUCKET,
+  messagingSenderId: process.env.MESSAGING_SENDER_ID,
+  appId: process.env.APP_ID,
 };
 
 // Initialize Firebase
